@@ -10,6 +10,7 @@
       --purple: #3E1B86;
       --purple-dark: #2a1260;
       --purple-mid: #4b2aa0;
+      --purple-light: #6e54a4;
       --cyan: #1BBCCC;
       --yellow: #DADC12;
       --white: #ffffff;
@@ -370,3 +371,166 @@ h4 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Oskused */
+
+.build {
+  background: var(--white);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.build .container {
+  max-width: 1440px;
+  max-height: 544px;
+  height: 100%;
+  background-color: var(--purple);
+  color: val(--white);
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.build-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%
+}
+
+.build-grid {
+  gap: 50px;
+}
+
+.build-grid .card-top {
+  background: var(--purple-light);
+  color: var(--white);
+  display: flex;
+  font-size: 24px;
+  flex-direction: column;
+  align-items: center;
+  max-height: 140px;
+  padding: 20px;
+  width: relative;
+  height: relative;
+}
+
+.build-grid .card-bottom {
+  background: var(--purple-light);
+  color: var(--white);
+  display: flex;
+  font-size: 24px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  max-height: 150px;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  margin-top: 60px;
+}
+
+ .build-grid h5 {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.4;
+  text-align: center;
+ }
+.build h4 {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--cyan);
+  line-height: 0.56;
+  text-align: center;
+  padding: 0px 0 50px 205px;
+}
+
+.build h3 {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 0.56;
+  text-align: center;
+  padding: 50px 205px 0px 0;
+}
+
+/* Kool */
+.school {
+  background: var(--white);
+  padding: 0 20px;
+  text-align: center;
+}
+.school .container {
+  max-width: 1440px;
+  background-color: transparent;
+  color: var(--white);
+  width: 100%;
+}
+
+.school-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%
+}
+
+.school-grid .jarve {
+  background: url('./pic/jarve.png') center ;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+  height: 302px;
+  width: 302px;
+  overflow: hidden;
+}
+.school-grid .lasnamae {
+  background: url('./pic/lasnamae.png') center ;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+  height: 302px;
+  width: 302px;
+  overflow: hidden;
+}
+.school-grid .mustamae {
+  background: url('./pic/mustamae.png') center ;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+  height: 302px;
+  width: 302px;
+  overflow: hidden;
+}
+.school-grid .kesklinn {
+  background: url('./pic/kesklinn.png') center ;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+  height: 302px;
+  width: 302px;
+  overflow: hidden;
+}
+.school h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black);
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.school-grid .card h2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--white);
+  gap: 5px;
+}
+  .school-grid .card img { width: 15px; height: 15px; ; background-color: transparent;}
