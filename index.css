@@ -17,6 +17,7 @@
       --light-bg: #eaf4fb;
       --nav-bg: #ffffff;
       --black: #181818;
+      --grey: #EBECED;
     }
 
     body {
@@ -534,3 +535,67 @@ h4 {
   gap: 5px;
 }
   .school-grid .card img { width: 15px; height: 15px; ; background-color: transparent;}
+
+  .btn-school {
+    background: var(--purple);
+    color: var(--white);
+    font-family: 'Onest', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 15px 22px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+.btn-school:hover { background: var(--purple-light); }
+
+/* Uudised */
+
+.news {
+  background: var(--white);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.news .container {
+  max-width: 1440px;
+  background-color: var(--grey);
+  color: val(--black);
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 50px;
+}
+
+.news-grid {
+  display: grid;
+  background: var(--grey);
+  grid-template-columns: repeat(3,1fr);
+  width: 100%
+  max-width: 1440px;
+}
+
+.news-grid h1 {
+  font-size: 24px;
+  color: var(--purple)
+}
+
+.news-grid .card {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  flex-direction: column;
+  align-items: left;
+  font-weight: 400;
+  max-width: 350;
+  max-height: 410;
+  color: var(--black);
+  gap: 5px;
+  background: var(--white);
+}
