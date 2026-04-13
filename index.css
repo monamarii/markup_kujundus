@@ -14,9 +14,8 @@
       --cyan: #1BBCCC;
       --yellow: #DADC12;
       --white: #ffffff;
-      --light-bg: #eaf4fb;
-      --nav-bg: #ffffff;
       --black: #181818;
+      --grey: #f5f5f5;
     }
 
     body {
@@ -28,7 +27,6 @@
 
     .container {
       width: 100%;
-      max-width: 1440px;
       margin-left: auto;
       margin-right: auto;
       padding-left: 85px;
@@ -134,7 +132,7 @@
       background: var(--white);
       position: relative;
       overflow: hidden;
-      background: url('background.png') no-repeat center ;
+      background: url('./pic/background.png') no-repeat center;
     }
 
 
@@ -331,9 +329,9 @@ h4 {
 .card-top,
 .card-bottom {
   display: flex;
-  flex-direction: column;   /* stack items */
-  align-items: flex-start;  /* align left */
-  gap: 5px;                /* space between title & button */
+  flex-direction: column;  
+  align-items: flex-start;  
+  gap: 5px;               
   padding: 40px 0 0 15px;
   background: var(--purple);
 }
@@ -376,12 +374,11 @@ h4 {
 
 .build {
   background: var(--white);
-  padding: 10px 20px;
   text-align: center;
 }
 
 .build .container {
-  max-width: 1440px;
+  max-width: 1300px;
   max-height: 544px;
   height: 100%;
   background-color: var(--purple);
@@ -408,10 +405,8 @@ h4 {
   font-size: 24px;
   flex-direction: column;
   align-items: center;
-  max-height: 140px;
   padding: 20px;
-  width: relative;
-  height: relative;
+  height: 150px;
 }
 
 .build-grid .card-bottom {
@@ -421,12 +416,8 @@ h4 {
   font-size: 24px;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
-  max-height: 150px;
+  height: 150px;
   padding: 20px;
-  width: auto;
-  height: auto;
-  margin-top: 60px;
 }
 
  .build-grid h5 {
@@ -534,3 +525,233 @@ h4 {
   gap: 5px;
 }
   .school-grid .card img { width: 15px; height: 15px; ; background-color: transparent;}
+
+/* ── UUDISED JA LOOD ── */
+.news {
+  background: var(--grey);
+  padding: 60px 0;
+}
+ 
+.news .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+
+}
+ 
+.news-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--purple);
+  text-align: center;
+  margin-bottom: 8px;
+}
+ 
+.news-sub {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 40px;
+}
+ 
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 36px;
+  padding: 0 20px;
+
+}
+ 
+.news-card {
+  border: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+}
+ 
+.news-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--white);
+}
+ 
+.news-body {
+  padding: 16px 18px;
+}
+ 
+.news-date {
+  font-size: 13px;
+  color: var(--black);
+  display: block;
+ text-align: left;
+  margin-bottom: 8px;
+}
+ 
+.news-heading {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--purple);
+  line-height: 1.3;
+  text-align: left;
+}
+ 
+.news-cta { text-align: center; }
+ 
+.btn-news {
+  display: inline-block;
+  border: 1.5px solid var(--purple);
+  color: var(--purple);
+  font-family: 'Onest', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 11px 28px;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+ 
+.btn-news:hover { background: var(--purple); color: var(--white); }
+ 
+@media (max-width: 700px) {
+  .news-grid { grid-template-columns: 1fr; }
+}
+ 
+/* ── HAKKA FÄNNIKS ── */
+.fan {
+  background: var(--purple);
+  padding: 40px 0;
+  text-align: center;
+  max-width: 1440px;
+  width: 100%;
+}
+ 
+.fan .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.fan-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 10px;
+}
+ 
+.fan-sub {
+  font-size: 16px;
+  color: var(--white);
+  margin-bottom: 36px;
+}
+ 
+.fan-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+ 
+.fan-fields {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ 
+.fan-field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 6px;
+}
+ 
+.fan-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+ 
+.fan-field input {
+  width: 280px;
+  padding: 12px 14px;
+  font-family: 'Onest', sans-serif;
+  font-size: 14px;
+  border: none;
+  background: var(--white);
+  color: var(--grey);
+  outline: none;
+}
+ 
+.fan-roles {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--white);
+  font-size: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ 
+.fan-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 15px;
+}
+ 
+.fan-radio input[type="radio"] {
+  accent-color: var(--cyan);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+ 
+.btn-fan {
+  background: var(--cyan);
+  color: var(--white);
+  font-family: 'Onest', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px 36px;
+  border: none;
+  cursor: pointer;
+  transition: background .2s;
+}
+ 
+.btn-fan:hover { background: #139aaa; }
+ 
+/* ── FOOTER ── */
+.footer {
+  background: var(--white);
+  border-top: 1px solid rgba(61,31,143,.1);
+  padding: 20px 0;
+}
+ 
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.footer-logo img {
+  height: 40px;
+  display: block;
+}
+ 
+.footer-social img {
+  height: 28px;
+  width: 28px;
+  display: block;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+ 
+.footer-social:hover img { opacity: 1; }
