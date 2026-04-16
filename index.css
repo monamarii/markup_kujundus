@@ -27,11 +27,11 @@
 
     .container {
       width: 100%;
+      max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
-      padding-left: 85px;
+      padding-left: 70px;
       padding-right: 70px;
-
     }
 
     /* ── NAV ── */
@@ -310,19 +310,15 @@ h4 {
   color: var(--white);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.card {
+.course-card {
   background: var(--purple);
   color: var(--white);
   display: flex;
   flex-direction: column;
   height: 500px;
-  width: 340px;
+  max-width: 340px;
+  width: 100%;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -336,7 +332,7 @@ h4 {
   background: var(--purple);
 }
 
-.card button {
+.course-card button {
   background: var(--yellow);
   border: none;
   padding: 6px 10px;
@@ -348,26 +344,16 @@ h4 {
   margin-bottom: 30px;
 }
 
-.card button:hover { background: #eff399; }
-.card button img { width: 18px; height: 18px; display: block; margin: auto; }
+.course-card button:hover { background: #eff399; }
+.course-card button img { width: 18px; height: 18px; display: block; margin: auto; }
 
-.card-img {
+.course-card-img {
   flex: 1;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Oskused */
@@ -378,24 +364,31 @@ h4 {
 }
 
 .build .container {
-  max-width: 1300px;
-  max-height: 544px;
-  height: 100%;
-  background-color: var(--purple);
-  color: val(--white);
+  max-width: 1200px;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 100px;
+  margin: 0 auto;
+  background-color: var(--purple);
+  color: var(--white);
+  min-height: 500px;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.build {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .build-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    width: 100%
-}
-
-.build-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 50px;
+}
+
+@media (max-width: 900px) {
+  .build-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .build-grid .card-top {
@@ -431,18 +424,20 @@ h4 {
   font-size: 48px;
   font-weight: 600;
   color: var(--cyan);
-  line-height: 0.56;
+  line-height: 1.05;
   text-align: center;
-  padding: 0px 0 50px 205px;
+  margin: 0;
+  padding: 0;
 }
 
 .build h3 {
   font-size: 48px;
   font-weight: 300;
   color: var(--white);
-  line-height: 0.56;
+  line-height: 1.05;
   text-align: center;
-  padding: 50px 205px 0px 0;
+  margin: 0 0 30px;
+  padding: 0;
 }
 
 /* Kool */
@@ -458,14 +453,10 @@ h4 {
   width: 100%;
 }
 
-.school-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    width: 100%
-}
-
 .school-grid .jarve {
-  background: url('./pic/jarve.png') center ;
+  background-image: url('pic/jarve.png');
+  background-position: center;
+  background-size: cover;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -473,10 +464,13 @@ h4 {
   gap: 5px;
   height: 302px;
   width: 302px;
+  margin: 0 auto;
   overflow: hidden;
 }
 .school-grid .lasnamae {
-  background: url('./pic/lasnamae.png') center ;
+  background-image: url('pic/lasnamae.png');
+  background-position: center;
+  background-size: cover;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -484,10 +478,13 @@ h4 {
   gap: 5px;
   height: 302px;
   width: 302px;
+  margin: 0 auto;
   overflow: hidden;
 }
 .school-grid .mustamae {
-  background: url('./pic/mustamae.png') center ;
+  background-image: url('pic/mustamae.png');
+  background-position: center;
+  background-size: cover;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -495,10 +492,13 @@ h4 {
   gap: 5px;
   height: 302px;
   width: 302px;
+  margin: 0 auto;
   overflow: hidden;
 }
 .school-grid .kesklinn {
-  background: url('./pic/kesklinn.png') center ;
+  background-image: url('pic/kesklinn.png');
+  background-position: center;
+  background-size: cover;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -506,6 +506,7 @@ h4 {
   gap: 5px;
   height: 302px;
   width: 302px;
+  margin: 0 auto;
   overflow: hidden;
 }
 .school h1 {
@@ -532,13 +533,14 @@ h4 {
   padding: 60px 0;
 }
  
-.news .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.news-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
   background: var(--white);
-
 }
+
  
 .news-title {
   font-size: 48px;
@@ -554,16 +556,6 @@ h4 {
   color: var(--black);
   text-align: center;
   margin-bottom: 40px;
-}
- 
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  width: 100%;
-  margin-bottom: 36px;
-  padding: 0 20px;
-
 }
  
 .news-card {
@@ -617,24 +609,26 @@ h4 {
  
 .btn-news:hover { background: var(--purple); color: var(--white); }
  
-@media (max-width: 700px) {
-  .news-grid { grid-template-columns: 1fr; }
-}
- 
 /* ── HAKKA FÄNNIKS ── */
 .fan {
-  background: var(--purple);
-  padding: 40px 0;
+  background: var(--white);
+  padding: 60px 0;
   text-align: center;
-  max-width: 1440px;
   width: 100%;
 }
- 
+
 .fan .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 40px;
+  background-color: var(--purple);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
+
  
 .fan-title {
   font-size: 40px;
@@ -655,6 +649,7 @@ h4 {
   align-items: center;
   gap: 20px;
   width: 100%;
+  max-width: 760px;
 }
  
 .fan-fields {

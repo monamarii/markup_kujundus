@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
 
 </head>
@@ -76,58 +77,71 @@
 <section class="section">
   <h3>Mida saad õppida</h3>
 
-  <div class="grid">
+  <div class="row g-4">
     
     <!-- Card -->
-    <div class="card">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="course-card logistika">
       <div class="card-top">
         <h4>Logistika</h4>
       </div>
       <div>
       <button><img src="./pic/purple_right.png" alt="" /></button>
       </div>
-      <div class="card-img" style="background-image: url('./pic/logistika.png');"></div>
+      <img class="course-card-img logistika" src="./pic/logistika.png" alt="Logistika">
+    </div>
     </div>
 
-    <div class="card purple">
-      <div class="card-img full" style="background-image: url('./pic/digi.png');"></div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="course-card purple digi">
+      <img class="course-card-img full" src="./pic/digi.png" alt="Digi- ja meediatehnoloogia">
       <div class="card-bottom">
         <h4>Digi- ja meediatehnoloogia</h4>
       </div>
       <button><img src="./pic/purple_right.png" alt="button" /></button>
     </div>
+    </div>
 
-    <div class="card">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="course-card elektro">
       <div class="card-top">
         <h4>Elektrotehnoloogia</h4>
       </div>
       <button><img src="./pic/purple_right.png" alt="button" /></button>
-      <div class="card-img yellow" style="background-image: url('./pic/elektro.png');"></div>
+      <img class="course-card-img yellow" src="./pic/elektro.png" alt="Elektrotehnoloogia">
+    </div>
     </div>
 
-    <div class="card purple">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="course-card purple digi">
       <div class="card-top">
         <h4>Tööstustehnoloogia</h4>
       </div>
       <button><img src="./pic/purple_right.png" alt="button" /></button>
-      <div class="card-img" style="background-image: url('./pic/digi.png');"></div>
+      <img class="course-card-img" src="./pic/digi.png" alt="Tööstustehnoloogia">
+    </div>
     </div>
 
-    <div class="card">
-      <div class="card-img yellow full" style="background-image: url('./pic/elektro.png');"></div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="course-card elektro-full">
+      <img class="course-card-img yellow full" src="./pic/elektro.png" alt="Ehitustehnoloogia">
       <div class="card-bottom">
         <h4>Ehitustehnoloogia</h4>
       </div>
       <button><img src="./pic/purple_right.png" alt="button" /></button>
     </div>
+    </div>
 
-    <div class="card">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="course-card logistika">
       <div class="card-top">
         <h4>Logistika</h4>
       </div>
       <button><img src="./pic/purple_right.png" alt="button" /></button>
-      <div class="card-img" style="background-image: url('./pic/logistika.png');"></div>
+      <img class="course-card-img logistika" src="./pic/logistika.png" alt="Logistika">
     </div>
+    </div>
+
   </div>
 </section>
 
@@ -136,18 +150,26 @@
   <div class="container">
     <h3>Meilt saad teadmisoskused.</h3>
     <h4>Loo oma tulevik siin.</h4>
-    <div class="build-grid">
+    <div class="build-grid row g-5">
+      <div class="col-lg-6 col-md-6 col-sm-12">
       <div class="card-top">
         <h5>Õppimine läbi<br> tegemise ja praktika</h5>
       </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
       <div class="card-bottom">
         <h5>Toetav kogukond <br> ja koostöö<br> ettevõtetega</h5>
       </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
       <div class="card-top">
         <h5>Õpetajad ja<br> mentorid päris<br> töömaailmast</h5>
       </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
       <div class="card-bottom">
         <h5>Kiirtee ellu ja edasi<br> õppima</h5>
+      </div>
       </div>
     </div>
   </div>
@@ -157,40 +179,33 @@
 <section class="school">
   <div class="container">
     <h1>Meil on neli kaasaegset ja mõnusat õppehoonet Tallinnas</h1>
-    <div class="school-grid">
+    <div class="row g-4 school-grid">
+        <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="mustamae">
           <h2> Techno TLN Mustamäe </h2>
           <p><img src="./pic/loc.png" alt="" /> Sõpruse pst 232</p>
         </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="jarve">
           <h2>Techno TLN Järve </h2>
           <p><img src="./pic/loc.png" alt="" /> Pärnu mnt 184 </p>
         </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="lasnamae">
           <h2>Techno TLN Lasnamäe <br></h2>
           <p><img src="./pic/loc.png" alt="" /> Uuslinna 85</p>
         </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
         <div class="kesklinn">
           <h2>Techno TLN Kesklinn</h2>
           <p><img src="./pic/loc.png" alt="" /> Pärnu mnt 57</p>
         </div>
+        </div>
     </div>
     <div class="btn-school">Loe meie lugu</div>
-  </section>
-
-  <!--Uudis -->
-<section class="news">
-  <div class="container">
-    <h3>Uudised ja lood</h3>
-    <p>Loe, kuidas meie õppurid ja õpetajad loovad tulevikku</p>
-  </div>
-  <div class="news-grid">
-    <div class="card">
-      <img src="./pic/news1.png">
-      <p>10.09.2025</p>
-      <h1>Noor meister 2025</h1>
-    </div>
-  </div>
   </section>
 
     <!-- UUDISED JA LOOD -->
@@ -198,7 +213,8 @@
   <div class="news-inner">
     <h2 class="news-title">Uudised ja lood</h2>
     <p class="news-sub">Loe, kuidas meie õppurid ja õpetajad loovad tulevikku</p>
-    <div class="news-grid">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="news-card">
         <div class="news-img" style="background-image: url('./pic/news1.png');"></div>
         <div class="news-body">
@@ -206,6 +222,8 @@
           <h3 class="news-heading">Noor Meister 2025</h3>
         </div>
       </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="news-card">
         <div class="news-img" style="background-image: url('./pic/news2.png');"></div>
         <div class="news-body">
@@ -213,12 +231,15 @@
           <h3 class="news-heading">Mehaanikud võitsid Euroopa võistlused</h3>
         </div>
       </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="news-card">
         <div class="news-img" style="background-image: url('./pic/news3.png');"></div>
         <div class="news-body">
           <span class="news-date">10.09.2025</span>
           <h3 class="news-heading">Uus 3D-printimise labor avati Techno Sõpruses</h3>
         </div>
+      </div>
       </div>
     </div>
     <div class="news-cta">
@@ -265,6 +286,8 @@
     </div>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
